@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { VStack, FormControl, FormLabel, Input, InputGroup, InputRightElement, Button, useToast, border } from '@chakra-ui/react'
 
 import axios from "axios";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
 
   const [show, setShow] = useState(false)
@@ -43,7 +43,7 @@ const Login = () => {
         position: 'bottom'
       });
       
-      history.push("/chats")
+      navigate('/chats');
      
     } catch (err) {
       toast({

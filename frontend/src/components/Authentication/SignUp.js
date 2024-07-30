@@ -2,7 +2,7 @@ import React from 'react'
 import { useToast } from '@chakra-ui/react'
 import { useState } from 'react'
 import axios from 'axios'
-import {useHistory} from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 import { VStack, FormControl, FormLabel, Input, InputGroup, InputRightElement, Button } from '@chakra-ui/react'
 const SignUp = () => {
   const [show, setShow] = useState(false)
@@ -118,7 +118,7 @@ if(password !== confirmPassword){
                 })
                    localStorage.setItem("userinfo",JSON.stringify(data));
                    setLoading(false)
-                   history.push('/chats')
+                   navigate('/chats');
           }
       catch(error){
        toast({

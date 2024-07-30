@@ -3,12 +3,12 @@ import { useEffect} from 'react';
 import { Container, Box, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import Login from '../Authentication/Login';
 import SignUp from '../Authentication/SignUp';
-import {useHistory} from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 const HomePage = () => {
   const history = useHistory()
   useEffect(()=>{
     const user=JSON.parse(localStorage.getItem("userInfo"))
-    if(user) history.push("/chats")
+    if(user)  navigate('/chats');
   },[history])
   return (
     <Container maxW="xl" centerContent>
