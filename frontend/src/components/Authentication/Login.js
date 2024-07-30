@@ -32,7 +32,7 @@ const Login = () => {
         },
 
       };
-      const { data } = await axios.post("http://localhost:5000/api/user/login", { email, password }, config);
+      const { data } = await axios.post("https://talkzone-521a.onrender.com/api/user/login", { email, password }, config);
       toast({
         title: "Login Successful",
         status: "success",

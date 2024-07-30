@@ -107,7 +107,7 @@ if(password !== confirmPassword){
               'Content-Type': 'application/json',
               }
               }
-              const {data} = await axios.post('http://localhost:5000/api/user', {name, email, password,pic},
+              const {data} = await axios.post('https://talkzone-521a.onrender.com/api/user', {name, email, password,pic},
                 config)
               toast({
                 title: 'User Created Successfully',
