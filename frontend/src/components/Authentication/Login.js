@@ -33,6 +33,7 @@ const Login = () => {
 
       };
       const { data } = await axios.post("https://talkzone-521a.onrender.com/api/user/login", { email, password }, config);
+      history.push("/chats")
       toast({
         title: "Login Successful",
         status: "success",
@@ -42,7 +43,7 @@ const Login = () => {
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false)
-      history.push("/chats")
+     
     } catch (err) {
       toast({
         title: "Invalid Email or Password",
