@@ -3,7 +3,8 @@ import { BellIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import React, { useState } from 'react'
 import { Chatstate } from '../context/Chatprovider'
 import Profilemodel from './Profilemodel'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 import axios from "axios"
 import { getSender } from '../../config/chatlogic'
 import UserListItem from '../useravatar/UserListItem'
@@ -28,10 +29,10 @@ const Sidedrawer = () => {
   const [loadingChat, setLoadingChat] = useState(false)
   const { user,setSelectedChat,chats,setChats,notification,setNotification } = Chatstate()
   const toast=useToast()
-const history=useHistory()
+  const navigate = useNavigate();
   const logoutHandler=()=>{
     localStorage.removeItem('userInfo')
-    history.push("/")
+    navigate('/');
   }
   const accessChat = async(userId) => {
     // Define this function if needed
