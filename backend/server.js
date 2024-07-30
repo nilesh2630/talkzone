@@ -12,7 +12,7 @@ dotenv.config()
 connectDB()
 app.use(express.json());
 app.use(cors({
-    origin: "https://talkzone-smoky.vercel.app/",
+    origin: "https://talkzone-d4fjvjsdv-nilesh-guptas-projects.vercel.app/",
 }));
 app.use('/api/user',userRoutes)
 app.use("/api/chat",chatRoutes)
@@ -26,7 +26,7 @@ const server=app.listen(5000,console.log("Server Started on port 5000"));
 const io=require('socket.io')(server,{
     pingTimeout:60000,
     cors:{
-        origin:"https://talkzone-smoky.vercel.app/"
+        origin:"https://talkzone-d4fjvjsdv-nilesh-guptas-projects.vercel.app/"
         }
 
 })
