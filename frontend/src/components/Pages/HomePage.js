@@ -5,7 +5,7 @@ import Login from '../Authentication/Login';
 import SignUp from '../Authentication/SignUp';
 import { useNavigate } from 'react-router-dom';
 const HomePage = () => {
-  const history = useHistory()
+  const navigate = useNavigate();
   useEffect(()=>{
     const user=JSON.parse(localStorage.getItem("userInfo"))
     if(user)  navigate('/chats');

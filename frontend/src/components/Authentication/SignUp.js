@@ -13,7 +13,7 @@ const SignUp = () => {
   const [loading,setLoading]=useState(false)
   const [pic, setPic] = useState()
   const toast = useToast();
-  const history=useHistory()
+  const navigate = useNavigate();
   const postDetails = (pics) => {
   
     // if (pics === undefined) {

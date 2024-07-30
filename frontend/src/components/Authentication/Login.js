@@ -11,7 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const toast = useToast()
-  const history = useHistory()
+  const navigate = useNavigate();
   const submitHandler = async () => {
     setLoading(true)
     if (!email || !password) {
